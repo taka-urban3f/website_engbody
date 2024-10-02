@@ -1,0 +1,117 @@
+// ---------------------------------------------------------------------------------
+// _secMV.scss
+// ---------------------------------------------------------------------------------
+
+.p-secMV {
+    position: relative;
+    height: 109.3vw;
+
+    &__inner {
+        padding-top: 40vw;
+        margin-left: 5.33vw;
+    }
+
+    &__heading {
+        font-family: "Josefin Sans", sans-serif;
+        font-style: italic;
+        font-size: 11vw;
+        line-height: 1;
+
+        &__line {
+            position: relative;
+            color: transparent;
+            animation: fadeIn 0.5s ease-in-out 1s forwards;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background-color: var(--color-mainPink);
+                animation: toRight 1s ease-in-out forwards;
+            }
+        }
+
+        &__and {
+            font-size: 9vw;
+            animation: fadeInPink 0.5s ease-in-out 1s forwards;
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        margin-top: 2.66vw;
+        font-size: 3.5vw;
+        font-weight: 900;
+        line-height: 0.92;
+        color: black;
+        background-color: white;
+    }
+
+    &__btn {
+        display: block;
+        margin-top: 4vw;
+        padding: 20px 26px;
+        width: fit-content;
+        font-size: 3.66vw;
+        letter-spacing: 0.05em;
+        line-height: 1;
+        color: white;
+        background-color: var(--color-mainPink);
+        border-radius: 100px;
+    }
+
+    &__imgWrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70.9vw;
+        height: 100%;
+        border-bottom-left-radius: 13.3vw;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@keyframes toRight {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        background-color: transparent;
+        color: transparent;
+    }
+    100% {
+        background-color: white;
+        color: black;
+    }
+} 
+
+@keyframes fadeInPink {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: var(--color-mainPink);
+    }
+} 
