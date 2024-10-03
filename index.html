@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/swiper.11.1.14.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -94,9 +95,26 @@
         <section class="p-secStudio">
             <div class="u-wrapper">
                 <h2 class="c-heading">Studio<span class="c-heading__sub">スタジオ</span></h2>
-                <div class="swiper">
-                    <div class="p-secStudio__imgWrapper"><img src="#" alt="" class="p-secStudio__img"></div>
+
+                <div class="p-secStudio__swiperOuter">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/studio01.jpg" alt="" class="p-secStudio__swiper__img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/studio02.jpg" alt="" class="p-secStudio__swiper__img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/studio03.jpg" alt="" class="p-secStudio__swiper__img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -205,6 +223,10 @@
     <div class="c-returnToTop">
         <span></span>
     </div>
+
+    <script src="js/swiper.11.1.14.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
