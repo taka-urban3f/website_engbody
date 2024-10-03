@@ -1,0 +1,57 @@
+// ---------------------------------------------------------------------------------
+// _secTrainer.scss
+// ---------------------------------------------------------------------------------
+@use '../../foundation/base';
+
+.p-secTrainer {
+    &__inner {
+        padding: 40px 0 40px;
+        background-color: var(--color-mainPink);
+
+        &__waveTop {
+            margin-bottom: -1px;
+        }
+
+        &__waveBottom {
+            margin-top: -1px;
+        }
+    }
+
+    &__cat {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+
+        &__btn {
+            padding-bottom: 10px;
+            font-weight: 700;
+            font-size: calc(18.4 / 16);
+            color: white;
+            text-align: center;
+
+            &--active {
+                border-bottom: 3px solid white;
+            }
+        }
+    }
+
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin-top: 20px;
+    }
+
+    &__box {
+        border-radius: 10px;
+        overflow: hidden;
+
+        &__text {
+            padding: 20px;
+            background-color: white;
+            font-size: base.p2r(14);
+            font-weight: 700;
+            line-height: calc(22.4 / 14);
+        }
+    }
+}

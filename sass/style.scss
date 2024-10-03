@@ -3,5 +3,8 @@
 @use 'foundation/base';
 @use 'layout/header';
 @use 'layout/footer';
+@use 'object/component/compo_common';
 @use 'object/project/secMV';
-@use 'object/project/secCatch'
+@use 'object/project/secCatch';
+@use 'object/project/secTrainer';
+@use 'object/utility/util_common';
