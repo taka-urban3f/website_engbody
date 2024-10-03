@@ -1,0 +1,65 @@
+// ---------------------------------------------------------------------------------
+// _secFAQ.scss
+// ---------------------------------------------------------------------------------
+@use '../../foundation/base';
+
+.p-secFAQ {
+    padding: 40px 0 50px;
+
+    &__list {
+        margin-top: 30px;
+
+        &__ctn {
+            $this: &;
+            border-bottom: 1px solid var(--color-lightGray);
+
+            &__question {
+                position: relative;
+                display: grid;
+                grid-template-columns: 40px 1fr;
+                padding: 19px 0 20px;
+                font-size: base.p2r(15);
+                line-height: calc(25.5 / 15);
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 12px;
+                    height: 8px;
+                    right: 6px;
+                    top: 50%;
+                    background-image: url(../img/expand_less.png);
+                    background-size: contain;
+                    transform: translateY(-50%);
+
+                }
+            }
+
+            &__symbol {
+                display: block;
+                flex-shrink: 0;
+                margin-right: 16px;
+                font-family: "Josefin Sans", sans-serif;
+                font-weight: 700;
+                font-size: base.p2r(26);
+                line-height: calc(29.9 / 26);
+                color: var(--color-mainPink);
+            }
+
+            &__answer {
+                display: grid;
+                grid-template-columns: 40px 1fr;
+                margin-bottom: 3px;
+                font-weight: 900;
+                font-size: base.p2r(15);
+                line-height: calc(26 / 15);
+                overflow: hidden;
+                transition: height .5s;
+
+                #{$this}--close & {
+                    height: 0;
+                }
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/swiper.11.1.14.css">
+    <link rel="stylesheet" href="css/swiper.11.1.14.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -65,7 +65,7 @@
         </section>
 
         <section class="p-secTrainer">
-            <img src="img/wave_top.svg" alt="" class="p-secTrainer__inner__waveTop">
+            <img src="img/wave_top.svg" alt="" class="p-secTrainer__waveTop">
             <div class="p-secTrainer__inner">
                 <div class="u-wrapper">
                     <h2 class="c-heading c-heading--white">Our Trainer<span class="c-heading__sub">トレーナー</span></h2>
@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <img src="img/wave_bottom.svg" alt="" class="p-secTrainer__inner__waveBottom">
+            <img src="img/wave_bottom.svg" alt="" class="p-secTrainer__waveBottom">
         </section>
 
         <section class="p-secStudio">
@@ -119,92 +119,108 @@
         </section>
 
         <section class="p-secPrice">
-            <div class="u-wrapper">
-                <h2 class="c-heading c-heading--white">Price<span class="c-heading__sub">料金</span></h2>
+            <img src="img/wave_top.svg" alt="" class="p-secPrice__waveTop">
+            <div class="p-secPrice__inner">
+                <div class="u-wrapper">
+                    <h2 class="c-heading c-heading--white">Price<span class="c-heading__sub">料金</span></h2>
+                </div>
+                <div class="p-secPrice__scrollBox">
+                    <div class="p-secPrice__flex">
+                        <dl class="p-secPrice__box">
+                            <dt class="p-secPrice__box__course">週１コース</dt>
+                            <dd class="p-secPrice__box__cntPrice">
+                                <p class="p-secPrice__box__cntPrice__price"><span class="p-secPrice__box__cntPrice__yen">¥</span>20,000</p>
+                                <p class="p-secPrice__box__cntPrice__note">（入会金 ¥10000）</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">レンタル</h4>
+                                <p class="p-secPrice__box__item__text">タオル、ウェア、プロテイン無料</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">レストラン</h4>
+                                <p class="p-secPrice__box__item__text">使用不可</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">食事指導</h4>
+                                <p class="p-secPrice__box__item__text">なし</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-secPrice__box">
+                            <dt class="p-secPrice__box__course">週2コース</dt>
+                            <dd class="p-secPrice__box__cntPrice">
+                                <p class="p-secPrice__box__cntPrice__price"><span class="p-secPrice__box__cntPrice__yen">¥</span>40,000</p>
+                                <p class="p-secPrice__box__cntPrice__note">（入会金 ¥10000）</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">レンタル</h4>
+                                <p class="p-secPrice__box__item__text">タオル、ウェア、プロテイン無料</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">レストラン</h4>
+                                <p class="p-secPrice__box__item__text">使用不可</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">食事指導</h4>
+                                <p class="p-secPrice__box__item__text">なし</p>
+                            </dd>
+                        </dl>
+                        <dl class="p-secPrice__box">
+                            <dt class="p-secPrice__box__course">無制限</dt>
+                            <dd class="p-secPrice__box__cntPrice">
+                                <p class="p-secPrice__box__cntPrice__price"><span class="p-secPrice__box__cntPrice__yen">¥</span>70,000</p>
+                                <p class="p-secPrice__box__cntPrice__note">（入会金 ¥10000）</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">レンタル</h4>
+                                <p class="p-secPrice__box__item__text">タオル、ウェア、プロテイン無料</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">レストラン</h4>
+                                <p class="p-secPrice__box__item__text">使用不可</p>
+                            </dd>
+                            <dd class="p-secPrice__box__item">
+                                <h4 class="p-secPrice__box__item__heading">食事指導</h4>
+                                <p class="p-secPrice__box__item__text">有り</p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="p-secPrice__scrollBox__guide">
+                        <img src="img/east.png" alt="" class="p-secPrice__scrollBox__guide__arrow">
+                        <span class="p-secPrice__scrollBox__guide__text">スクロール</span>
+                    </div>
+                </div>
             </div>
-            <div class="p-secPrice__flex">
-                <dl class="p-secPrice__box">
-                    <dt class="p-secPrice__list__course">週１コース</dt>
-                    <dd class="p-secPrice__cntPrice">
-                        <p class="p-secPrice__cntPrice__price">¥20,000</p>
-                        <p class="p-secPrice__cntPrice__note">（入会金 ¥10000）</p>
-                    </dd>
-                    <dd class="p-secPrice__item">
-                        <h4 class="p-secPrice__item__heading">レンタル</h4>
-                        <p class="p-secPrice__item__text">タオル、ウェア、プロテイン無料</p>
-                    </dd>
-                    <dd class="p-secPrice__item">
-                        <h4 class="p-secPrice__item__heading">レストラン</h4>
-                        <p class="p-secPrice__item__text">使用不可</p>
-                    </dd>
-                    <dd class="p-secPrice__item">
-                        <h4 class="p-secPrice__item__heading">食事指導</h4>
-                        <p class="p-secPrice__item__text">なし</p>
-                    </dd>
-                </dl>
-                <dl class="p-secPrice__box"></dl>
-                <dt class="p-secPrice__list__course">週2コース</dt>
-                <dd class="p-secPrice__cntPrice">
-                    <p class="p-secPrice__cntPrice__price">¥40,000</p>
-                    <p class="p-secPrice__cntPrice__note">（入会金 ¥10000）</p>
-                </dd>
-                <dd class="p-secPrice__item">
-                    <h4 class="p-secPrice__item__heading">レンタル</h4>
-                    <p class="p-secPrice__item__text">タオル、ウェア、プロテイン無料</p>
-                </dd>
-                <dd class="p-secPrice__item">
-                    <h4 class="p-secPrice__item__heading">レストラン</h4>
-                    <p class="p-secPrice__item__text">使用不可</p>
-                </dd>
-                <dd class="p-secPrice__item">
-                    <h4 class="p-secPrice__item__heading">食事指導</h4>
-                    <p class="p-secPrice__item__text">なし</p>
-                </dd>
-                </dl>
-                <dl class="p-secPrice__box"></dl>
-                <dt class="p-secPrice__list__course">無制限</dt>
-                <dd class="p-secPrice__cntPrice">
-                    <p class="p-secPrice__cntPrice__price">¥70,000</p>
-                    <p class="p-secPrice__cntPrice__note">（入会金 ¥10000）</p>
-                </dd>
-                <dd class="p-secPrice__item">
-                    <h4 class="p-secPrice__item__heading">レンタル</h4>
-                    <p class="p-secPrice__item__text">タオル、ウェア、プロテイン無料</p>
-                </dd>
-                <dd class="p-secPrice__item">
-                    <h4 class="p-secPrice__item__heading">レストラン</h4>
-                    <p class="p-secPrice__item__text">使用不可</p>
-                </dd>
-                <dd class="p-secPrice__item">
-                    <h4 class="p-secPrice__item__heading">食事指導</h4>
-                    <p class="p-secPrice__item__text">有り</p>
-                </dd>
-                </dl>
-            </div>
+            <img src="img/wave_bottom.svg" alt="" class="p-secPrice__waveBottom">
         </section>
 
         <section class="p-secFAQ">
             <div class="u-wrapper">
                 <h2 class="c-heading">FAQ<span class="c-heading__sub">よくあるご質問</span></h2>
                 <dl class="p-secFAQ__list">
-                    <dt class="p-secFAQ__list__question">
-                        <span class="p-secFAQ__symbol">Q</span>見学や体験は可能ですか？
-                    </dt>
-                    <dd class="p-secFAQ__list__answer">
-                        <span class="p-secFAQ__symbol">A</span>無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
-                    </dd>
-                    <dt class="p-secFAQ__list__question">
-                        <span class="p-secFAQ__symbol">Q</span>用意するものは何がありますか？
-                    </dt>
-                    <dd class="p-secFAQ__list__answer">
-                        <span class="p-secFAQ__symbol">A</span>シューズをご持参ください。ウェアとタオルは無料でレンタルが可能です。
-                    </dd>
-                    <dt class="p-secFAQ__list__question">
-                        <span class="p-secFAQ__symbol">Q</span>シャワールームはありますか？
-                    </dt>
-                    <dd class="p-secFAQ__list__answer">
-                        <span class="p-secFAQ__symbol">A</span>5つのシャワールームがございます。ボディソープ・シャンプー・リンスなどのアメニティやドライヤーもご用意しております。
-                    </dd>
+                    <div class="p-secFAQ__list__ctn">
+                        <dt class="p-secFAQ__list__ctn__question">
+                            <span class="p-secFAQ__list__ctn__symbol">Q</span>見学や体験は可能ですか？
+                        </dt>
+                        <dd class="p-secFAQ__list__ctn__answer">
+                            <span class="p-secFAQ__list__ctn__symbol">A</span>無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
+                        </dd>
+                    </div>
+                    <div class="p-secFAQ__list__ctn">
+                        <dt class="p-secFAQ__list__ctn__question">
+                            <span class="p-secFAQ__list__ctn__symbol">Q</span>用意するものは何がありますか？
+                        </dt>
+                        <dd class="p-secFAQ__list__ctn__answer">
+                            <span class="p-secFAQ__list__ctn__symbol">A</span>シューズをご持参ください。ウェアとタオルは無料でレンタルが可能です。
+                        </dd>
+                    </div>
+                    <div class="p-secFAQ__list__ctn">
+                        <dt class="p-secFAQ__list__ctn__question">
+                            <span class="p-secFAQ__list__ctn__symbol">Q</span>シャワールームはありますか？
+                        </dt>
+                        <dd class="p-secFAQ__list__ctn__answer">
+                            <span class="p-secFAQ__list__ctn__symbol">A</span>5つのシャワールームがございます。ボディソープ・シャンプー・リンスなどのアメニティやドライヤーもご用意しております。
+                        </dd>
+                    </div>
                 </dl>
             </div>
         </section>
@@ -224,7 +240,7 @@
         <span></span>
     </div>
 
-    <script src="js/swiper.11.1.14.js"></script>
+    <script src="js/swiper-bundle.11.1.14.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>

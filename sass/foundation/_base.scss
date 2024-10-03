@@ -18,6 +18,10 @@ img {
     width: 100%;
 }
 
+dt {
+    font-weight: normal;
+}
+
 @function p2r($pixel) {
     @return $pixel / 16 * 1rem;
 }
