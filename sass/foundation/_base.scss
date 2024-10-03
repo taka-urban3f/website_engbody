@@ -3,13 +3,33 @@
 // ---------------------------------------------------------------------------------
 :root {
     --color-mainPink: #EB51C2;
+    --color-almostBlack: #111111;
 }
+
 html {
     font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
     font-size: 100%;
     line-height: 1.5;
 }
 
 img {
     width: 100%;
+}
+
+@function p2r($pixel) {
+    @return $pixel / 16 * 1rem;
+}
+
+@mixin btn_common {
+    display: block;
+    padding: 20px 61.5px;
+    width: fit-content;
+    font-weight: 700;
+    font-size: p2r(13);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    color: white;
+    background-color: var(--color-mainPink);
+    border-radius: 100px;
 }

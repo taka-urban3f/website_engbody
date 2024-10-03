@@ -1,0 +1,82 @@
+// ---------------------------------------------------------------------------------
+// _secCatch.scss
+// ---------------------------------------------------------------------------------
+@use '../../foundation/base';
+
+.p-secCatch {
+    margin-bottom: 40px;
+    
+    &__heading {
+        margin-top: 20 / 375 * -100vw;
+
+        font-family: "Josefin Sans", sans-serif;
+        font-style: italic;
+        font-size: 56 / 375 * 100vw;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--color-mainPink);
+        text-align: center;
+    }
+
+    &__sub {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 16 / 375 * 100vw;
+        font-weight: 700;
+        line-height: calc(18.4 / 16);
+        color: var(--color-almostBlack);
+        text-align: center;
+
+        &__color {
+            color: var(--color-mainPink);
+        }
+    }
+
+    &__text {
+        margin: 25px 20px;
+        font-size: base.p2r(15);
+        line-height: calc(27 / 15);
+    }
+
+    &__ctn {
+        &:not(:last-of-type) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &_imgWrapper {}
+
+    &__box {
+        position: relative;
+        margin: -10px 20px 0;
+        padding: 40px 30px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgb(0 0 0 / .5);
+        z-index: 1;
+
+        &__heading {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: base.p2r(18);
+            line-height: calc(20.7 / 18);
+            color: var(--color-mainPink);
+        }
+
+        &__textBig {
+            margin: 20px 0 15px;
+            font-weight: 900;
+            font-size: base.p2r(22);
+            line-height: calc(33 / 22);
+        }
+
+        &__text {
+            font-size: base.p2r(14);
+            line-height: calc(23.8 / 14);
+        }
+    }
+
+    &__btn {
+        @include base.btn_common;
+        margin: 40px auto 0;
+    }
+
+}
