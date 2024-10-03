@@ -4,17 +4,13 @@
 @use '../../foundation/base';
 
 .p-secTrainer {
+    &__waveTop {
+        margin-bottom: -1px;
+    }
+
     &__inner {
         padding: 40px 0 40px;
         background-color: var(--color-mainPink);
-
-        &__waveTop {
-            margin-bottom: -1px;
-        }
-
-        &__waveBottom {
-            margin-top: -1px;
-        }
     }
 
     &__cat {
@@ -53,5 +49,9 @@
             font-weight: 700;
             line-height: calc(22.4 / 14);
         }
+    }
+
+    &__waveBottom {
+        margin-top: -1px;
     }
 }
