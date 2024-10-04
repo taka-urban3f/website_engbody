@@ -10,29 +10,28 @@
         margin-top: 30px;
 
         &__ctn {
-            $this: &;
             border-bottom: 1px solid var(--color-lightGray);
 
             &__question {
                 position: relative;
                 display: grid;
-                grid-template-columns: 40px 1fr;
+                grid-template-columns: 40px 1fr 19px;
+                // align-items: center;
                 padding: 19px 0 20px;
                 font-size: base.p2r(15);
                 line-height: calc(25.5 / 15);
 
-                &::after {
-                    position: absolute;
-                    content: '';
-                    width: 12px;
-                    height: 8px;
-                    right: 6px;
-                    top: 50%;
-                    background-image: url(../img/expand_less.png);
-                    background-size: contain;
-                    transform: translateY(-50%);
-
-                }
+                // &::after {
+                //     position: absolute;
+                //     content: '';
+                //     width: 12px;
+                //     height: 8px;
+                //     right: 6px;
+                //     top: 50%;
+                //     background-image: url(../img/expand_less.png);
+                //     background-size: contain;
+                //     transform: translateY(-50%);
+                // }
             }
 
             &__symbol {
@@ -46,19 +45,29 @@
                 color: var(--color-mainPink);
             }
 
+            &__arrow {
+                display: block;
+                width: 12px;
+                align-self: center;
+                transition: transform .3s ease-out;
+
+                &--reverse {
+                    transform: scaleY(-1);
+                }
+            }
+
             &__answer {
+                overflow: hidden;
+            }
+
+            &__answerInner {
                 display: grid;
                 grid-template-columns: 40px 1fr;
                 margin-bottom: 3px;
                 font-weight: 900;
                 font-size: base.p2r(15);
                 line-height: calc(26 / 15);
-                overflow: hidden;
                 transition: height .5s;
-
-                #{$this}--close & {
-                    height: 0;
-                }
             }
         }
     }
