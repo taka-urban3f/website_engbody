@@ -115,6 +115,10 @@
                 line-height: calc(20.7 / 18);
                 color: var(--color-mainPink);
 
+                &--green {
+                    color: var(--color-green);
+                }
+
                 @include base.mq(pc) {
                     font-size: base.p2r(24);
                 }
