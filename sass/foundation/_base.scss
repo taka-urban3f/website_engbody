@@ -38,6 +38,11 @@ dt {
     color: white;
     background-color: var(--color-mainPink);
     border-radius: 100px;
+
+    @include mq(pc) {
+        padding: 30px 44px;
+        font-size: p2r(20);
+    }
 }
 
 $device_types: ('tab': 'screen and (min-width:768px)', 'pc': 'screen and (min-width: 1000px)');

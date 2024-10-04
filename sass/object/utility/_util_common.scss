@@ -1,8 +1,16 @@
 // ---------------------------------------------------------------------------------
 // _util_common.scss
 // ---------------------------------------------------------------------------------
+@use '../../foundation/base';
+
 .u-wrapper {
     padding: 0 30px;
     max-width: 1170px;
     margin: 0 auto;
+}
+
+.u-spOnly {
+    @include base.mq(tab) {
+        display: none;
+    }
 }

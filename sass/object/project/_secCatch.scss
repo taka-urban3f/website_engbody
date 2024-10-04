@@ -4,27 +4,42 @@
 @use '../../foundation/base';
 
 .p-secCatch {
-    margin-bottom: 40px;
-    
+    max-width: 1440px;
+    margin: 0 auto 40px;
+
+    @include base.mq(pc) {
+        margin-bottom: 90px;
+    }
+
     &__heading {
-        margin-top: 20 / 375 * -100vw;
+        margin-top: max(20 / 375 * -100vw, -20px);
 
         font-family: "Josefin Sans", sans-serif;
         font-style: italic;
-        font-size: 56 / 375 * 100vw;
+        font-size: min(56 / 375 * 100vw, 75px);
         font-weight: 700;
         line-height: 1;
         color: var(--color-mainPink);
         text-align: center;
+
+        @include base.mq(pc) {
+            margin-top: 20 / 1440 * -100vw;
+            font-size: 108 / 1440 * 100vw;
+        }
     }
 
     &__sub {
         font-family: "Josefin Sans", sans-serif;
-        font-size: 16 / 375 * 100vw;
+        font-size: min(16 / 375 * 100vw, 22px);
         font-weight: 700;
         line-height: calc(18.4 / 16);
         color: var(--color-almostBlack);
         text-align: center;
+
+        @include base.mq(pc) {
+            font-size: 32 / 1440 * 100vw;
+            line-height: calc(37 / 32);
+        }
 
         &__color {
             color: var(--color-mainPink);
@@ -35,48 +50,107 @@
         margin: 25px 20px;
         font-size: base.p2r(15);
         line-height: calc(27 / 15);
+
+        @include base.mq(tab) {
+            text-align: center;
+        }
+
+        @include base.mq(pc) {
+            margin: 25px 30px;
+            font-size: base.p2r(16);
+            line-height: calc(32 / 16);
+        }
     }
 
     &__ctn {
+        $this: &;
+
+        position: relative;
+
         &:not(:last-of-type) {
             margin-bottom: 30px;
-        }
-    }
 
-    &_imgWrapper {}
-
-    &__box {
-        position: relative;
-        margin: -10px 20px 0;
-        padding: 40px 30px;
-        background-color: white;
-        border-radius: 8px;
-        box-shadow: 0 0 20px rgb(0 0 0 / .5);
-        z-index: 1;
-
-        &__heading {
-            font-family: "Josefin Sans", sans-serif;
-            font-size: base.p2r(18);
-            line-height: calc(20.7 / 18);
-            color: var(--color-mainPink);
+            @include base.mq(pc) {
+                margin-bottom: 90px;
+            }
         }
 
-        &__textBig {
-            margin: 20px 0 15px;
-            font-weight: 900;
-            font-size: base.p2r(22);
-            line-height: calc(33 / 22);
+        &__imgWrapper {
+            @include base.mq(pc) {
+                // width: calc(950 / 1440 * 100vw);
+                width: 950px;
+
+                #{$this}:nth-of-type(even) & {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
         }
 
-        &__text {
-            font-size: base.p2r(14);
-            line-height: calc(23.8 / 14);
+        &__box {
+            position: relative; // zindex指定の為。
+            margin: -10px 20px 0;
+            padding: 40px 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgb(0 0 0 / .5);
+            z-index: 1;
+
+            @include base.mq(pc) {
+                position: absolute;
+                margin: 0;
+                padding: 60px;
+                width: 555px;
+                right: 20px;
+                bottom: -10px;
+
+                #{$this}:nth-of-type(even) & {
+                    left: 20px;
+                }
+            }
+
+            &__heading {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: base.p2r(18);
+                line-height: calc(20.7 / 18);
+                color: var(--color-mainPink);
+
+                @include base.mq(pc) {
+                    font-size: base.p2r(24);
+                }
+            }
+
+            &__textBig {
+                margin: 20px 0 15px;
+                font-weight: 900;
+                font-size: base.p2r(22);
+                line-height: calc(33 / 22);
+
+                @include base.mq(pc) {
+                    font-size: base.p2r(32);
+                }
+            }
+
+            &__text {
+                font-size: base.p2r(14);
+                line-height: calc(23.8 / 14);
+
+                @include base.mq(pc) {
+                    font-size: base.p2r(15);
+                    line-height: calc(27 / 15);
+                    letter-spacing: 0.01em;
+                }
+            }
         }
     }
 
     &__btn {
         @include base.btn_common;
         margin: 40px auto 0;
+
+        @include base.mq(pc) {
+            margin-top: 70px;
+        }
     }
 
 }
