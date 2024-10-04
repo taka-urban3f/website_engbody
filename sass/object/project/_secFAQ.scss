@@ -16,22 +16,9 @@
                 position: relative;
                 display: grid;
                 grid-template-columns: 40px 1fr 19px;
-                // align-items: center;
                 padding: 19px 0 20px;
                 font-size: base.p2r(15);
                 line-height: calc(25.5 / 15);
-
-                // &::after {
-                //     position: absolute;
-                //     content: '';
-                //     width: 12px;
-                //     height: 8px;
-                //     right: 6px;
-                //     top: 50%;
-                //     background-image: url(../img/expand_less.png);
-                //     background-size: contain;
-                //     transform: translateY(-50%);
-                // }
             }
 
             &__symbol {

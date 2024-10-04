@@ -14,6 +14,15 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+// Priceセクションを横スクロールしたらガイドを消す処理。
+const elem_srcollBox = document.querySelector('.p-secPrice__scrollBox');
+const elem_guide = document.querySelector('.p-secPrice__scrollBox__guide')
+if (elem_srcollBox && elem_guide) {
+  elem_srcollBox.addEventListener('scroll', function () {
+    elem_guide.classList.add('p-secPrice__scrollBox__guide--hide');
+  });
+}
+
 // FAQのドロワー開閉処理
 const elems_faqCtn = document.querySelectorAll('.p-secFAQ__list__ctn');
 if (elems_faqCtn.length >= 1) {
