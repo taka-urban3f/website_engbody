@@ -1,21 +1,36 @@
 // ---------------------------------------------------------------------------------
 // _secMV.scss
 // ---------------------------------------------------------------------------------
+@use '../../foundation/base';
 
 .p-secMV {
     position: relative;
-    height: 109.3vw;
+    height: min(410 / 375 * 100vw, 472px);
+
+    @include base.mq(pc) {
+        height: 680 / 1440 * 100vw;
+    }
 
     &__inner {
-        padding-top: 40vw;
-        margin-left: 5.33vw;
+        padding-top: min(150 / 375 * 100vw, 150px);
+        margin-left: min(20 / 375 * 100vw, 119px);
+
+        @include base.mq(pc) {
+            padding-top: 220 / 1440 * 100vw;
+            margin-left: 172 / 1440 * 100vw;
+        }
     }
 
     &__heading {
         font-family: "Josefin Sans", sans-serif;
         font-style: italic;
-        font-size: 11vw;
+        font-size: min(41.25 / 375 * 100vw, 62px);
         line-height: 1;
+
+        @include base.mq(pc) {
+            font-size: 90 / 1440 * 100vw;
+
+        }
 
         &__line {
             position: relative;
@@ -35,43 +50,63 @@
         }
 
         &__and {
-            font-size: 9vw;
+            font-size: min(33.75 / 375 * 100vw, 59px);
             animation: fadeInPink 0.5s ease-in-out 1s forwards;
+
+            @include base.mq(pc) {
+                font-size: 85 / 1440 * 100vw;
+            }
         }
     }
 
     &__subtitle {
         display: inline-block;
-        margin-top: 2.66vw;
-        font-size: 3.5vw;
+        margin-top: min(10 / 375 * 100vw, 13px);
+        font-size: min(13.13 / 375 * 100vw, 19px);
         font-weight: 900;
         line-height: 0.92;
         color: black;
         background-color: white;
+
+        @include base.mq(pc) {
+            margin-top: 20 / 1440 * 100vw;
+            font-size: 28 / 1440 * 100vw;
+        }
     }
 
     &__btn {
         display: block;
-        margin-top: 4vw;
-        padding: 20px 26px;
+        margin-top: min(15 / 375 * 100vw, 20px);
+        padding: min(20 / 375 * 100vw, 20px) min(26 / 375 * 100vw, 34px);
         width: fit-content;
-        font-size: 3.66vw;
+        font-size: min(13 / 375 * 100vw, 13px);
         letter-spacing: 0.05em;
         line-height: 1;
         color: white;
         background-color: var(--color-mainPink);
         border-radius: 100px;
+
+        @include base.mq(pc) {
+            margin-top: 30 / 1440 * 100vw;
+            padding: (30 / 1440 * 100vw) (49 / 1440 * 100vw);
+            font-size: 20 / 1440 * 100vw;
+        }
     }
 
     &__imgWrapper {
         position: absolute;
         top: 0;
         right: 0;
-        width: 70.9vw;
+        width: min(266 / 375 * 100vw, 736px);
         height: 100%;
-        border-bottom-left-radius: 13.3vw;
+        border-bottom-left-radius: min(50 / 375 * 100vw, 62px);
         overflow: hidden;
         z-index: -1;
+
+        @include base.mq(pc) {
+            width: 1060 / 1440 * 100vw;
+            border-bottom-left-radius: 90 / 1440 * 100vw;
+        }
     }
 
     &__img {
@@ -86,10 +121,12 @@
     0% {
         width: 0;
     }
+
     50% {
         width: 100%;
         left: 0;
     }
+
     100% {
         width: 0;
         left: 100%;
@@ -101,17 +138,19 @@
         background-color: transparent;
         color: transparent;
     }
+
     100% {
         background-color: white;
         color: black;
     }
-} 
+}
 
 @keyframes fadeInPink {
     0% {
         color: transparent;
     }
+
     100% {
         color: var(--color-mainPink);
     }
-} 
+}
