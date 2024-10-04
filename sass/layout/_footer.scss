@@ -1,0 +1,15 @@
+// ---------------------------------------------------------------------------------
+// _footer.scss
+// ---------------------------------------------------------------------------------
+@use '../foundation/base';
+
+.l-footer {
+    display: grid;
+    place-items: center;
+    height: 118px;
+    background-color: var(--color-almostBlack);
+
+    &__img {
+        width: 87px;
+    }
+}
