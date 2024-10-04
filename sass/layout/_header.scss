@@ -1,14 +1,44 @@
 // ---------------------------------------------------------------------------------
 // _header.scss
 // ---------------------------------------------------------------------------------
+@use '../foundation/base';
+
 
 .l-header {
+    $this: &;
+
     position: fixed;
-    padding: 29px 20px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 60px;
     z-index: 10;
+    transition: background-color .5s;
+
+    &--stickout {
+        background-color: white;
+    }
 
     &__img {
+        display: block;
         width: 96.7px;
+    }
+
+    &__btn {
+        visibility: hidden;
+        opacity: 0;
+        @include base.btn_common;
+        padding: 12px 14px;
+        font-weight: 900;
+        font-size: base.p2r(12);
+        letter-spacing: 0.05em;
+        transition: visibility .5s, opacity .5s;
+
+        #{$this}--stickout & {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }

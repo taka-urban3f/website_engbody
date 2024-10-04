@@ -83,3 +83,24 @@ if (elems_faqCtn.length >= 1) {
     });
   });
 }
+
+// スクロースされた場合の処理。
+window.addEventListener('scroll', function () {
+  const elem_header = document.querySelector('.l-header');
+  if (elem_header) {
+    if (window.scrollY != 0) {
+      elem_header.classList.add('l-header--stickout');
+    } else {
+      elem_header.classList.remove('l-header--stickout');
+    }
+  }
+
+  const elem_return = document.querySelector('.c-returnToTop');
+  if (elem_return) {
+    if (window.scrollY != 0) {
+      elem_return.classList.add('c-returnToTop--show');
+    } else {
+      elem_return.classList.remove('c-returnToTop--show');
+    }
+  }
+});
