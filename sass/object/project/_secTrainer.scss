@@ -25,13 +25,17 @@
             color: white;
             text-align: center;
 
-            &--active {
+            &:has(input:checked) {
                 border-bottom: 3px solid white;
             }
 
             @include base.mq(pc) {
                 padding-bottom: 20px;
                 font-size: base.p2r(18);
+            }
+
+            input {
+                display: none;
             }
         }
     }
@@ -44,6 +48,7 @@
     }
 
     &__box {
+        display: none;
         background-color: white;
         border-radius: 10px;
         overflow: hidden;
@@ -64,4 +69,13 @@
     &__waveBottom {
         margin-top: -1px;
     }
+}
+
+// 選択されたカテゴリーのメンバーのみ表示。
+.p-secTrainer__cat:has(input#trainer:checked)~.p-secTrainer__grid .p-secTrainer__box--trainer {
+    display: block;
+}
+
+.p-secTrainer__cat:has(input#staff:checked)~.p-secTrainer__grid .p-secTrainer__box--staff {
+    display: block;
 }
