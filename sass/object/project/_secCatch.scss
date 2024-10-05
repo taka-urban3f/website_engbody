@@ -24,7 +24,7 @@
 
         @include base.mq(pc) {
             margin-top: 20 / 1440 * -100vw;
-            font-size: 108 / 1440 * 100vw;
+            font-size: min(108 / 1440 * 100vw, 175px);
         }
     }
 
