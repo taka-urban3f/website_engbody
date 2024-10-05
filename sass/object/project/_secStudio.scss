@@ -3,56 +3,64 @@
 // ---------------------------------------------------------------------------------
 @use '../../foundation/base';
 
+@mixin swiper_button {
+    position: absolute;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 100px;
+    z-index: 1;
+
+    @include base.mq(pc) {
+        height: 60px;
+        width: 60px;
+    }
+
+    &:before {
+        position: absolute;
+        display: block;
+        inset: 0;
+        content: '';
+        background-repeat: no-repeat;
+        background-size: 7px auto;
+        background-position: center;
+
+        @include base.mq(pc) {
+            background-size: 9px auto;
+
+        }
+    }
+}
+
 .p-secStudio {
     padding: 40px 0 20px;
+
+    @include base.mq(pc) {
+        padding: 60px 0 30px;
+    }
 
     &__swiperOuter {
         position: relative;
         margin-top: 30px;
 
         .swiper-button-prev {
-            position: absolute;
-            top: 50%;
+            @include swiper_button;
             left: 0;
-            height: 40px;
-            width: 40px;
-            background-color: white;
-            border-radius: 100px;
             transform: translate(-50%, -50%);
-            z-index: 1;
 
             &:before {
-                position: absolute;
-                display: block;
-                inset: 0;
-                content: '';
                 background-image: url(../img/navigate_before.png);
-                background-repeat: no-repeat;
-                background-size: 6.55px auto;
-                background-position: center;
             }
         }
 
         .swiper-button-next {
-            position: absolute;
-            top: 50%;
+            @include swiper_button;
             right: 0;
-            height: 40px;
-            width: 40px;
-            background-color: white;
-            border-radius: 100px;
             transform: translate(50%, -50%);
-            z-index: 1;
 
             &:before {
-                position: absolute;
-                display: block;
-                inset: 0;
-                content: '';
                 background-image: url(../img/navigate_next.png);
-                background-repeat: no-repeat;
-                background-size: 6.55px auto;
-                background-position: center;
             }
         }
     }

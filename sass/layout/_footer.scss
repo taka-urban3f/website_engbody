@@ -9,7 +9,15 @@
     height: 118px;
     background-color: var(--color-almostBlack);
 
+    @include base.mq(pc) {
+        height: 223px;
+    }
+
     &__img {
         width: 87px;
+
+        @include base.mq(pc) {
+            width: 180px;
+        }
     }
 }

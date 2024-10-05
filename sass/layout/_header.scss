@@ -40,5 +40,11 @@
             visibility: visible;
             opacity: 1;
         }
+
+        @include base.mq(pc) {
+            // ミックスインbtn_commonのメディアクエリーを打ち消し。
+            padding: 12px 14px;
+            font-size: base.p2r(12);
+        }
     }
 }

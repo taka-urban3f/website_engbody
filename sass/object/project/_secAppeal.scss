@@ -7,6 +7,10 @@
     padding-bottom: 30px;
     background-color: var(--color-mainPink);
 
+    @include base.mq(pc) {
+        padding-bottom: 50px;
+    }
+
     &__text {
         margin-top: 30px;
         font-family: "Josefin Sans", sans-serif;
@@ -15,6 +19,14 @@
         line-height: 1;
         color: white;
         text-align: center;
+
+        @include base.mq(pc) {
+            margin-top: 50px;
+            font-size: base.p2r(64);
+            line-height: calc(73.6 / 64);
+
+
+        }
     }
 
     &__btn {
@@ -22,5 +34,9 @@
         margin: 10px auto 0;
         background-color: white;
         color: var(--color-mainPink);
+
+        @include base.mq(pc) {
+            margin: 15px auto 0;
+        }
     }
 }
