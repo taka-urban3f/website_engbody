@@ -1,4 +1,8 @@
-// スワイパーの設定。
+// jsが有効であることを表す。
+document.body.classList.remove('noscript');
+
+// ---------------------------------------------------
+// -----スワイパーの設定-----
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   loop: true,
@@ -15,7 +19,8 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-// Priceセクションを横スクロールしたらガイドを消す処理。
+// ---------------------------------------------------
+// -----Priceセクションを横スクロールしたらガイドを消す処理-----
 const elem_srcollBox = document.querySelector('.p-secPrice__scrollBox');
 const elem_guide = document.querySelector('.p-secPrice__scrollBox__guide')
 if (elem_srcollBox && elem_guide) {
@@ -24,7 +29,8 @@ if (elem_srcollBox && elem_guide) {
   });
 }
 
-// FAQのドロワー開閉処理
+// ---------------------------------------------------
+// -----FAQのドロワー開閉処理-----
 const elems_faqCtn = document.querySelectorAll('.p-secFAQ__list__ctn');
 if (elems_faqCtn.length >= 1) {
   elems_faqCtn.forEach(function (elem_faqCtn) {
@@ -85,7 +91,8 @@ if (elems_faqCtn.length >= 1) {
   });
 }
 
-// スクロースされた場合の処理。
+// ---------------------------------------------------
+// -----スクロースイベントに関する処理-----
 window.addEventListener('scroll', function () {
   const elem_header = document.querySelector('.l-header');
   if (elem_header) {
@@ -105,3 +112,48 @@ window.addEventListener('scroll', function () {
     }
   }
 });
+
+// ---------------------------------------------------
+// -----MVの画像をフェードインさせる処理-----
+window.addEventListener('load', function () {
+  const elem_mv = document.querySelector('.p-secMV__img');
+  if (elem_mv) {
+    elem_mv.style.transition = "opacity 0.7s ease-in";
+    elem_mv.style.visibility = "visible";
+    elem_mv.style.opacity = 1;
+  }
+});
+
+
+// ---------------------------------------------------
+// -----スクロールしたら画面内でフェードインさせる処理-----
+function doWhenIntersection(entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.style.visibility = 'visible';
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}
+
+const io_options = {
+  root: null,
+  rootMargin: "-100px 0px",
+  threshold: 0,
+};
+
+const io = new IntersectionObserver(doWhenIntersection, io_options);
+
+// フェードインさせるそれぞれの要素に初期状態とアニメーションを設定する。
+const elems_catchBox = document.querySelectorAll('.p-secCatch__ctn__box, .p-secTrainer__box');
+if (elems_catchBox.length >= 1) {
+  elems_catchBox.forEach(function (elem_box) {
+    elem_box.style.visibility = 'hidden';
+    elem_box.style.opacity = 0;
+    elem_box.style.transform = 'translateY(50px)';
+    elem_box.style.transition = "opacity 0.7s ease-in, transform 1s ease-out";
+
+    io.observe(elem_box);
+  });
+}
