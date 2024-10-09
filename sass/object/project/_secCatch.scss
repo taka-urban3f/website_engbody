@@ -29,14 +29,15 @@
     }
 
     &__sub {
-        font-family: "Josefin Sans", sans-serif;
         font-size: min(16 / 375 * 100vw, 22px);
         font-weight: 700;
+        letter-spacing: 0.1em;
         line-height: calc(18.4 / 16);
         color: var(--color-almostBlack);
         text-align: center;
 
         @include base.mq(pc) {
+            margin-top: 10px;
             font-size: 32 / 1440 * 100vw;
             line-height: calc(37 / 32);
         }
@@ -47,7 +48,7 @@
     }
 
     &__text {
-        margin: 25px 20px;
+        margin: 25px 20px 20px;
         font-size: base.p2r(15);
         line-height: calc(27 / 15);
 
